@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { enviroment } from '../enviroments/enviroment';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'enviroments';
+
+  constructor() {
+    console.log(`Enviroment message: ${enviroment.message}`);
+  }
 }
